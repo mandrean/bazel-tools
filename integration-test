@@ -103,7 +103,7 @@ def main():
         subprocess.check_call(['bazel', 'run', '@spotify_bazel_tools//format', '--', '-w', d], cwd=d)
     finally:
         subprocess.check_call(['bazel', 'shutdown'], cwd=d)
-        #shutil.rmtree(d)
+        shutil.rmtree(d)
 
 
 if __name__ == '__main__':
